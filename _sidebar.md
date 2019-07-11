@@ -1,7 +1,5 @@
  - Robots
-   - [MiniBot](docs/robots/MiniBot)
-   - [HATCHfield](docs/robots/HATCHfield)
-   - [Q*Bert](docs/robots/qbert)
+   - [Example](docs/robots/example)
   
  - Team Reference
    - [Introduction](docs/reference/README)
@@ -17,16 +15,10 @@
    - [Pathfinder v1 Documentation](https://github.com/JacisNonsense/Pathfinder/wiki)
 
  - Robot Programming Quick-Reference
-   - [Introduction](docs/learn/README)
-   - [The Various Robot Bases](docs/learn/robotbase)
-   - [Reading From an Xbox Controller](docs/learn/xboxcontroller)
    - [Using a cubic deadband](docs/learn/cubicdeadband)
-   - [Example robot logs](docs/learn/examplelog)
-   - [Using a solenoid](https://frc-docs.readthedocs.io/en/latest/docs/software/actuators/solenoids.html)
 
  - Guides
-   - [Configuring an OpenMesh Router](docs/guides/openmesh)
-   - [Flashing a RoboRIO](docs/guides/roborio)
+   - [example](docs/guides/example)
 
  - Slideshows and Presentations
    - [GradleRIO Behind The Scenes](https://docs.google.com/presentation/d/1fnfz4hCvnvDJb1606Ee7VkJCn4IvJDUIbYxkTxR6YsM/edit?usp=sharing)
