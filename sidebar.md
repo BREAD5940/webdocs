@@ -1,5 +1,5 @@
  - Robots
-   - [Example](docs/robots/example)
+   - [Example](docs/robots/ExampleBot)
   
  - Team Reference
    - [Introduction](docs/reference/README)
