@@ -1,4 +1,4 @@
-# MiniBot
+# ExampleBot
 Something something stuff
 
  - [2018 Code](https://todo.link/test)
