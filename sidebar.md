@@ -14,7 +14,7 @@
    - [GradleRIO Behind The Scenes](https://docs.google.com/presentation/d/1fnfz4hCvnvDJb1606Ee7VkJCn4IvJDUIbYxkTxR6YsM/edit?usp=sharing)
   
  - Other misc links
-   - [Misc useful links](miscResources)
+   - [Misc useful links](docs/miscResources)
 
  - Notes
    - [FMS Behind The Scenes](docs/fms)
