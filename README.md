@@ -1,2 +1,4 @@
-# webdocs
-docs. also maybe. using jeckyll. Thanks again to Team 5024, whose doc structure we borrowed heavily from.
+# Team 5940 Webdocs
+
+Welcome to Team 5940's webdocs. 
+
