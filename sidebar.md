@@ -4,21 +4,12 @@
  - Quick Links
    - [Gitting Gud](docs/git)
    - [Team Trello](docs/trello)
-
- - Team Reference
-   - [Introduction](docs/reference/README)
  
  - 3rd party references
    - [3rd Party Documentation](docs/thirdParty)
 
- - Robot Programming Quick-Reference
+ - Learn to Program and Blog Posts
    - [Using a cubic deadband](docs/learn/cubicdeadband)
-
- - Slideshows and Presentations
-   - [GradleRIO Behind The Scenes](https://docs.google.com/presentation/d/1fnfz4hCvnvDJb1606Ee7VkJCn4IvJDUIbYxkTxR6YsM/edit?usp=sharing)
-  
- - Other misc links
-   - [Misc useful links](docs/miscResources)
 
  - Notes
    - [FMS Behind The Scenes](docs/fms)
@@ -26,3 +17,6 @@
    - [RoboRIO](docs/roborio)
    - [Depencancy URLs](docs/deps)
    - [DriverStation](docs/ds)
+  
+ - External Links
+   - [Misc useful links](docs/miscResources)
