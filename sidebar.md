@@ -13,7 +13,6 @@
 
  - Notes
    - [FMS Behind The Scenes](docs/fms)
-   - [Event API](docs/eventapi)
    - [RoboRIO](docs/roborio)
    - [Depencancy URLs](docs/deps)
    - [DriverStation](docs/ds)
