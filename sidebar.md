@@ -1,6 +1,10 @@
  - Robots
    - [Example](docs/robots/ExampleBot)
   
+ - Quick Links
+   - [Gitting Gud](docs/git)
+   - [Team Trello](docs/trello)
+
  - Team Reference
    - [Introduction](docs/reference/README)
  
