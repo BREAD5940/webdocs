@@ -2,9 +2,9 @@
    - [Example](docs/robots/ExampleBot)
   
  - Quick Links
+   - [FalconLibrary Links](docs/learn/falconlib/index)
    - [Gitting Gud](docs/git)
    - [Team Trello](docs/trello)
-   - [FalconLibrary](docs/learn/falconlib/index)
  
  - 3rd party references
    - [3rd Party Documentation](docs/thirdParty)
@@ -20,7 +20,3 @@
   
  - External Links
    - [Misc useful links](docs/miscResources)
-
- - Temp plz delet
-   - [Falconlib index](docs/learn/falconlib/readme)
-   - [Pathing](docs/learn/falconlib/pathing)

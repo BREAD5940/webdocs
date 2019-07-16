@@ -17,7 +17,7 @@ http://devsite.ctr-electronics.com/maven/release/com/ctre/phoenix/Phoenix-latest
 http://www.revrobotics.com/content/sw/max/sdk/REVRobotics.json
 ```
 
-## PathFinder
+## PathFinder OLD
 ```
 https://dev.imjac.in/maven/jaci/pathfinder/PathfinderOLD-latest.json
 ```
