@@ -89,7 +89,9 @@ class StandardTrajectoryTracker(
 
 ## Converting Trajectory Tracker Outputs to robot motion
 
-The process of converting linear and anglar velocities and accelerations into individual wheel velocity setpoints and voltages is done using the robot's `DifferentialDrive`. The following example code is from the `DifferentialTrackerDriveBase` interface, which will accept a raw `TrajectoryTrackerOutput` from the `setOutput` method, which solves inverse dynamics to calculate wheel velocities and voltages:
+### Converting outputs to desired velocities and feedforwards with a DifferentialDrive
+
+The process of converting linear and angler velocities and accelerations into individual wheel velocity setpoints and voltages is done using the robot's `DifferentialDrive`. The following example code is from the `DifferentialTrackerDriveBase` interface, which will accept a raw `TrajectoryTrackerOutput` from the `setOutput` method, which solves inverse dynamics to calculate wheel velocities and voltages:
 
 ```Kotlin
 val dynamics = differentialDrive.solveInverseDynamics(output.differentialDriveVelocity, output.differentialDriveAcceleration)
@@ -104,4 +106,10 @@ rightMotor.setVelocity(
 )
 ```
 
-However, `DifferentialTrackerDriveBase` contains all of this code in the `setOutput(output: TrajectoryTrackerOutput)` method. You shouldn't ever need to use the above code, but should simply use the `setOutput` method.
+However, `DifferentialTrackerDriveBase` contains all of this code in the `setOutput(output: TrajectoryTrackerOutput)` method. You shouldn't ever need to use the above code, but should simply use the `setOutput` method. Furthermore, this relies on an accurate velocity closed loop in addition to calculated feed forwards to accurately track trajectories.
+
+### Tuning a velocity PID loop to track trajectories
+
+The process is similar to any PID loop. However, any feed forward term should be set to zero, as it is replaced by the calculations done by the `DifferentialDrive`. Begin with a small P value, no I or D, and try following a short baseline trajectory. Observe the motor setpoint and actual velocities using [Phoenix Tuner](https://github.com/CrossTheRoadElec/Phoenix-Releases) for Talons and SmartDashboard prints for Spark MAXes. A detailed guide for how to tune a velocity closed loop gain is avalible on the [Phoenix documentation](https://phoenix-documentation.readthedocs.io/en/latest/ch16_ClosedLoop.html?highlight=motion%20magic#dialing-kp).
+
+For a quick and dirty tune for people already familiar with PID tuning follows: Begin with a P value of 0.05 for talons, and begin by doubling P until high frequency oscillations occur. Next, set D to 10x P, and increase to up to 25x P, while making sure that the motor will still track the setpoint even if it changes rapidly (ex. during deceleration). In 2019, or low gear kp was 0.45 with a kd of 9 (Talon SRXes geared to 8ft/sec), and a high gear kp of 1.2 with a kd of 24. 
