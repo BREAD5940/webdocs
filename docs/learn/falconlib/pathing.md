@@ -32,7 +32,7 @@ The path generator takes a `List<TimingConstraint<Pose2dWithCurvature>>`, which 
 
 We used the `DifferentialDriveDynamicsConstraint` and `CentripetalAccelerationConstraint` to initially constrain the trajectory, and used the `VelocityLimitRegionConstraint` to limit Hab velocity and `VelocityLimitRadiusConstraint` to slow the trajectory for vision placement.
 
-## Following Paths
+## Tracking a trajectory
 
 Path following is governed by a `TrajectoryTracker`, which uses a pre-generated Trajectory and attempts to follow it using a selection of different path following algorithms. The trackers offered by FalconLibrary are:
  - FeedForwardTracker, which uses no feedback about robot pose
@@ -40,7 +40,7 @@ Path following is governed by a `TrajectoryTracker`, which uses a pre-generated 
  - RamseteTracker, which uses the RAMSETE time-varying non linear reference controller to correct for disturbances in real time
    - This sentence basically won us Innovation in Control in 2019
 
-To use a trajectory tracker, call the `reset` method on the tracker with the new trajectory to follow, and call the `nextState` method repeatedly to calculate Chassis speeds (TODO link Kinematics article). These should next be fed into your robot's `DifferentialDrive` model to calculate velocities for the left and right wheels, and the velocities and feed forwards fed to the appropriate motor controllers. Note that the `TrajectoryTrackerDriveBase` and `TankDriveSubsystem` contain methods to abstract this calculation away and will take the raw `TrajectoryTrackerOutput` and perform feedforward calculations for you. This example command will follow a path using a drive base which inherits `TrajectoryTrackerDriveBase`.
+To use a trajectory tracker, call the `reset` method on the tracker with the new trajectory to follow, and call the `nextState` method repeatedly to calculate a `TrajectoryTrackerOutput`. The output contains linear and angular velocities and accelerations These outptus should next be fed into your robot's [DifferentialDrive](docs/learn/falconlib/kinematics#DifferentialDrive) model to calculate velocities for the left and right wheels, and the velocities and feed forwards fed to the appropriate motor controllers. This process is further detailed below. Note that the `DifferentialTrackerDriveBase` and `TankDriveSubsystem` contain methods to abstract this calculation away and will take the raw `TrajectoryTrackerOutput` and perform feedforward calculations for you. This example command will follow a path using a drive base which inherits `DifferentialTrackerDriveBase`:
 
 ```Kotlin
 class StandardTrajectoryTracker(
@@ -86,3 +86,22 @@ class StandardTrajectoryTracker(
     }
 }
 ```
+
+## Converting Trajectory Tracker Outputs to robot motion
+
+The process of converting linear and anglar velocities and accelerations into individual wheel velocity setpoints and voltages is done using the robot's `DifferentialDrive`. The following example code is from the `DifferentialTrackerDriveBase` interface, which will accept a raw `TrajectoryTrackerOutput` from the `setOutput` method, which solves inverse dynamics to calculate wheel velocities and voltages:
+
+```Kotlin
+val dynamics = differentialDrive.solveInverseDynamics(output.differentialDriveVelocity, output.differentialDriveAcceleration)
+
+leftMotor.setVelocity(
+        dynamics.wheelVelocity.left * differentialDrive.wheelRadius,
+        dynamics.voltage.left
+)
+rightMotor.setVelocity(
+        dynamics.wheelVelocity.right * differentialDrive.wheelRadius,
+        dynamics.voltage.right
+)
+```
+
+However, `DifferentialTrackerDriveBase` contains all of this code in the `setOutput(output: TrajectoryTrackerOutput)` method. You shouldn't ever need to use the above code, but should simply use the `setOutput` method.

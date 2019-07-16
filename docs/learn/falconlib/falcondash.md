@@ -25,8 +25,8 @@ best bet.
 
 To generate code, just click `Generate` and paste the code into
 a command or command group. Specific implementation will vary
-user to user. See Following Trajectories (TODO Link) for more
-information. One example might be:
+user to user. See [the pathing article](docs/learn/falconlib/pathing) for more
+information. An example of code generated using FalconDashboard is:
 
 ```java
         TimedTrajectory<Pose2dWithCurvature> traject = TrajectoryGeneratorKt.getDefaultTrajectoryGenerator().generateTrajectory(
