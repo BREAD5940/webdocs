@@ -20,3 +20,7 @@
   
  - External Links
    - [Misc useful links](docs/miscResources)
+
+ - Temp plz delet
+   - [Falconlib index](docs/learn/falconlib/readme)
+   - [Pathing](docs/learn/falconlib/pathing)
