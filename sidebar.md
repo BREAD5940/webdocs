@@ -3,6 +3,7 @@
   
  - Quick Links
    - [FalconLibrary Links](docs/learn/falconlib/index)
+   - [Characterization](docs/learn/characterization)
    - [Gitting Gud](docs/git)
    - [Team Trello](docs/trello)
  

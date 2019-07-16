@@ -2,7 +2,7 @@
 
 ## Generating paths
 
-Following paths can be Fun and Easy with FalconLibrary. Before starting, the drivetrain must both be charicterized with the [Robot Charicterization Toolsuite](https://github.com/robotpy/robot-characterization/) (TODO document here), and Velocity closed loop must already be tuned to get reliable results. 
+Following paths can be Fun and Easy with FalconLibrary. Before starting, the drivetrain must both be charicterized with the [Robot Charicterization Toolsuite](docs/learn/characterization), and Velocity closed loop must already be tuned to get reliable results. 
 
 Paths are generated using the `TrajectoryGenerator` class. To generate a trajectory, use the `DefaultTrajectoryGenerator` unless you have a good reason not to. On a technical note, the splies are evaluated using recursive arc subdivision (from Team 254). These splines are constrained using waypoints represented as `Pose2d`s, maximum velocities/accelerations, and other user specified constraints. Paths can be previewed visually [using FalconDashboard](docs/learn/faclinlib/falcondash). An example trajectory which might be used in robot code follows:
 
