@@ -4,6 +4,7 @@
  - Quick Links
    - [Gitting Gud](docs/git)
    - [Team Trello](docs/trello)
+   - [FalconLibrary](docs/learn/falconlib/index)
  
  - 3rd party references
    - [3rd Party Documentation](docs/thirdParty)
