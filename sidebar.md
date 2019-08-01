@@ -2,6 +2,7 @@
    <!-- - [Example](docs/robots/ExampleBot) -->
   
  - Quick Links
+   - [How to program a robot](docs/guides/learnToRobot)
    - [FalconLibrary Links](docs/learn/falconlib/index)
    - [Characterization](docs/learn/characterization)
    - [Gitting Gud](docs/git)
