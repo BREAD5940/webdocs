@@ -21,6 +21,7 @@
 
  - Learn to Program and Blog Posts
    - [Using a cubic deadband](docs/learn/cubicdeadband)
+   - [Debugging robot code](docs/guides/debug)
 
  - Notes
    - [FMS Behind The Scenes](docs/fms)
