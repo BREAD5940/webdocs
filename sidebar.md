@@ -5,11 +5,12 @@
  - [Cubic Deadband](docs/guides/generalRobot/cubicDeadband)
  - [Debugging with IntelliJ](docs/guides/generalRobot/debug)
  - [Git intro](docs/guides/generalRobot/git)
+ - [Getting started with Gradle](docs/guides/generalRobot/introToGradle)
  - [Learn to code a robot](docs/guides/generalRobot/learnToRobot)
  - [The RoboRIO](docs/guides/generalRobot/roborio)
  - [Third party libraries](docs/guides/generalRobot/thirdParty)
 
-# [FalconLibrary](docs/learn/falconlib)
+# FalconLibrary
 
 - [What is FalconLibrary?](docs/guides/falconlib/intro)
 - [Falcon Motors for open and closed loop](docs/guides/falconlib/falconmotor)
@@ -20,7 +21,7 @@
 - [Falcon Command-based API](docs/guides/falconlib/commands)
 
 
-# [Info](docs/info)
+# Info
 
 - [Blogs of note](docs/info/blogs)
 - [Misc links and resources](docs/info/miscResources)

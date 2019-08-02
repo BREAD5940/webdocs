@@ -10,7 +10,7 @@ Let's look at all the folders from the top down. The following folders and files
 
 Folders:
 - build, which stores compiled binary files (not user editable code)
-- config, which stores configuration for the [code formatter to follow](docs/guides/introToGradle?id=linting-and-code-format-checks)
+- config, which stores configuration for the [code formatter to follow](docs/guides/generalRobot/introToGradle?id=linting-and-code-format-checks)
 - gradle, which stores the Gradle JAR itself
 - vendordeps, which stores links to libraries for the [NavX Gyro](https://www.andymark.com/products/navx-mxp-robotics-navigation-sensor), [CTRE motor controllers](http://www.ctr-electronics.com/control-system.html), and more
 
