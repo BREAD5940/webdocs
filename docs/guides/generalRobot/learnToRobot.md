@@ -10,7 +10,7 @@ We currently program our robots in Kotlin, a new language written for the Java V
 
 If you already know OO Java/Kotlin, you're ready to get started messing with real robot code. Documentation of WPILib, the framework we use to program robots, is available [on FRC-docs](https://frc-docs.readthedocs.io/en/latest/index.html). While FRC-docs does have [a short intro to robot code](https://frc-docs.readthedocs.io/en/latest/docs/software/getting-started-with-benchtop/creating-benchtop-test-program-cpp-java.html), it's not great, so please refer to [Writing your first robot program](docs/guides/firstProgram).
 
-We also use [FalconLibrary](docs/learn/falconlib/intro), the Kotlin-based library for FRC by Team 5190, to help program the robot. The library offers features such as a common API for all motors (including simulated motors), built in code for autonomous path following, a typesafe unit library and much more. Other external libraries used in 2019 include kotlinX for coroutines, jSerialComm for Jevois serial, kotson for JSON, mockito for mocking hardware in tests, ktlint for code formatting and Junit for unit testing.
+We also use [FalconLibrary](docs/guides/falconlib/intro), the Kotlin-based library for FRC by Team 5190, to help program the robot. The library offers features such as a common API for all motors (including simulated motors), built in code for autonomous path following, a typesafe unit library and much more. Other external libraries used in 2019 include kotlinX for coroutines, jSerialComm for Jevois serial, kotson for JSON, mockito for mocking hardware in tests, ktlint for code formatting and Junit for unit testing.
 
 # Code structure and design patterns
 

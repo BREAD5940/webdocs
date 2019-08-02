@@ -1,6 +1,6 @@
 # 254 Kinematic classes
 
-FalconLibrary offers the `DCMotorTransmission` model from Team 254, as well as `DifferentialDrive`, which are used extensively for feedforward calculations in [path following](docs/learn/falconlib/pathing). A `DCMotorTransission` is used to model a motor connected to something which rotates such as a drivetrain wheel connected to a motor (or motors), a moving arm or elevator. The `DifferentialDrive` models a drivetrain and contains methods for converting between a `ChassisState` of linear and angular velocities and wheel speeds for each motor. For calculating the constants used in the `DCMotorTransmission`, see [the characterization article](docs/learn/characterization).
+FalconLibrary offers the `DCMotorTransmission` model from Team 254, as well as `DifferentialDrive`, which are used extensively for feedforward calculations in [path following](docs/guides/falconlib/pathing). A `DCMotorTransission` is used to model a motor connected to something which rotates such as a drivetrain wheel connected to a motor (or motors), a moving arm or elevator. The `DifferentialDrive` models a drivetrain and contains methods for converting between a `ChassisState` of linear and angular velocities and wheel speeds for each motor. For calculating the constants used in the `DCMotorTransmission`, see [the characterization article](docs/learn/characterization).
 
 ## DCMotorTransmission
 

@@ -4,7 +4,7 @@
 
 Following paths can be Fun and Easy with FalconLibrary. Before starting, the drivetrain must both be charicterized with the [Robot Charicterization Toolsuite](docs/learn/characterization), and Velocity closed loop must already be tuned to get reliable results. 
 
-Paths are generated using the `TrajectoryGenerator` class. To generate a trajectory, use the `DefaultTrajectoryGenerator` unless you have a good reason not to. On a technical note, the splies are evaluated using recursive arc subdivision (from Team 254). These splines are constrained using waypoints represented as `Pose2d`s, maximum velocities/accelerations, and other user specified constraints. Paths can be previewed visually [using FalconDashboard](docs/learn/faclinlib/falcondash). An example trajectory which might be used in robot code follows:
+Paths are generated using the `TrajectoryGenerator` class. To generate a trajectory, use the `DefaultTrajectoryGenerator` unless you have a good reason not to. On a technical note, the splies are evaluated using recursive arc subdivision (from Team 254). These splines are constrained using waypoints represented as `Pose2d`s, maximum velocities/accelerations, and other user specified constraints. Paths can be previewed visually [using FalconDashboard](docs/guides/falconlib//falcondash). An example trajectory which might be used in robot code follows:
 
 ```Kotlin
 val baseline = DefaultTrajectoryGenerator.generateTrajectory(
@@ -40,7 +40,7 @@ Path following is governed by a `TrajectoryTracker`, which uses a pre-generated 
  - RamseteTracker, which uses the RAMSETE time-varying non linear reference controller to correct for disturbances in real time
    - This sentence basically won us Innovation in Control in 2019
 
-To use a trajectory tracker, call the `reset` method on the tracker with the new trajectory to follow, and call the `nextState` method repeatedly to calculate a `TrajectoryTrackerOutput`. The output contains linear and angular velocities and accelerations These outptus should next be fed into your robot's [DifferentialDrive](docs/learn/falconlib/kinematics#DifferentialDrive) model to calculate velocities for the left and right wheels, and the velocities and feed forwards fed to the appropriate motor controllers. This process is further detailed below. Note that the `DifferentialTrackerDriveBase` and `TankDriveSubsystem` contain methods to abstract this calculation away and will take the raw `TrajectoryTrackerOutput` and perform feedforward calculations for you. This example command will follow a path using a drive base which inherits `DifferentialTrackerDriveBase`:
+To use a trajectory tracker, call the `reset` method on the tracker with the new trajectory to follow, and call the `nextState` method repeatedly to calculate a `TrajectoryTrackerOutput`. The output contains linear and angular velocities and accelerations These outptus should next be fed into your robot's [DifferentialDrive](docs/guides/falconlib/kinematics#DifferentialDrive) model to calculate velocities for the left and right wheels, and the velocities and feed forwards fed to the appropriate motor controllers. This process is further detailed below. Note that the `DifferentialTrackerDriveBase` and `TankDriveSubsystem` contain methods to abstract this calculation away and will take the raw `TrajectoryTrackerOutput` and perform feedforward calculations for you. This example command will follow a path using a drive base which inherits `DifferentialTrackerDriveBase`:
 
 ```Kotlin
 class StandardTrajectoryTracker(

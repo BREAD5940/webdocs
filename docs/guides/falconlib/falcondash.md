@@ -25,7 +25,7 @@ best bet.
 
 To generate code, just click `Generate` and paste the code into
 a command or command group. Specific implementation will vary
-user to user. See [the pathing article](docs/learn/falconlib/pathing) for more
+user to user. See [the pathing article](docs/guides/falconlib/pathing) for more
 information. An example of code generated using FalconDashboard is:
 
 ```java
@@ -84,4 +84,4 @@ information. An example of code generated using FalconDashboard is:
 The `DefaultTrajectoryGenerator` is just one instance
 of FalconLib's `TrajectoryGenerator`, with settings
 adjusted to minimize generation time while maintaining
-plenty of accuracy. For more information on paths, path constraints, and path following see [Pathing with FalconLib](docs/learn/falconlib/pathing)
+plenty of accuracy. For more information on paths, path constraints, and path following see [Pathing with FalconLib](docs/guides/falconlib/pathing)
