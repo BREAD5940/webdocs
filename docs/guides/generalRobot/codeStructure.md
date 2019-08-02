@@ -26,6 +26,31 @@ The `src`, or source, folder itself contains subfolders as pictured. Everything 
 
 The `frc/robot` folder is where everything starts. It contains the main `Robot` file, as well as universal `Constant`s and the robot `Control` bindings. <a href="files/Kotlin-Example-Command-Based.zip" download="Kotlin-Example-Command-Based.zip">Download the project</a> and poke around for yourself, most stuff should be commented. 
 
+## The Robot.kt/Robot.java file
+
+The main Robot file is run when the robot code first starts. For more information on `FalconTimedRobot`, [see here](docs/learn/falconlib/commandBased?id=falcontimedrobot). `FalconTimedRobot` is basically a wrapper around `TimedRobot`, and includes methods for resetting subsystems at key points and other cleanup methods. It's suggested to use it over using WPI's base class for robots, `TimedRobot`. Both the following methods, which are automatically called when the indicated event takes place:
+
+```java
+public void robotInit() {} // run when the robot first starts, useful for instantiating hardware 
+public void disabledInit() {} // run when the robot first enters disabled mode (including disable from teleop)
+public void autonomousInit() {} // run when the robot first enters autonomous mode
+public void teleopInit() {} // run when the robot first enters teleop mode
+public void testInit() {} // run when the robot first enters test mode
+public void robotPeriodic() {} // run constantly always while the robot is on
+public void disabledPeriodic() {} // run constantly while the robot is disabled in addition to robotPeriodic
+public void autonomousPeriodic() {} // run constantly while the robot is enabled in autonomous in addition to robotPeriodic
+public void teleopPeriodic() {} // run constantly while the robot is enabled in teleop in addition to robotPeriodic
+public void testPeriodic() {} // run constantly while the robot is enabled in test mode in addition to robotPeriodic
+```
+
+Further documentation from WPI is avalible on the [WPILib API documentation](https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/TimedRobot.html). None, one or all of these methods may be [overridden](https://www.geeksforgeeks.org/overriding-in-java/). The following example robot will simply print every time it's turned on in teleop mode
+
+```kotlin
+class Robot : TimedRobot() {
+    override fun teleopInit() = println("Hello, world!")
+}
+```
+
 ## Subsystems
 
 The `frc/robot` package also contains a `subsystem` folder. Here we put one folder for each of our subsystems; this folder contains both the Subsystem itself as well as it's associated commands. In this example, the `ExampleSubsystem` lives in the `frc/robot/example` package; this package contains not just the `ExampleSubsystem` itself, but also an `ExampleCommand` which [requires](https://frc-docs.readthedocs.io/en/latest/docs/software/commandbased/subsystems.html) the Subsystem. Again, for more on Command-based, read the frc-docs article [here](https://frc-docs.readthedocs.io/en/latest/docs/software/commandbased/subsystems.html), and more on Falcon Command-based [here](docs/learn/falconlib/commands). If you want to add say a `DriveSubsystem`, first create a `drive` folder within the `subsystem` package, and add your `DriveSubsystem` and any other commands that may require the `DriveSubsystem` also within the `drive` package. Again, note that the [naming convention for packages is all lower case](https://stackoverflow.com/a/12534322) to avoid conflicting names of classes and packages; classes are written in [PascalCase](http://wiki.c2.com/?PascalCase).
