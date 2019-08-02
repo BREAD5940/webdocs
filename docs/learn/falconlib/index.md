@@ -6,3 +6,4 @@
 - [FalconDashboard](docs/learn/falconlib/falcondash)
 - [Kinematics - characterization](docs/learn/characterization)
 - [Kinematics - 254 models](docs/learn/falconlib/kinematics)
+- [Falcon Command-based API](docs/learn/falconlib/commands)

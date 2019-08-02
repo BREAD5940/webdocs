@@ -1,6 +1,4 @@
-# Writing your First Robot Program
-
-Writing your first robot program can be really daunting at first. A ZIP file of a bare bones Kotin command based framework is available for download <a href="files/Kotlin-Example-Command-Based.zip" download="Kotlin-Example-Command-Based.zip">here</a>. 
+# Build systems and Gradle
 
 To compile user written code into code that the [roboRIO](https://frc-docs.readthedocs.io/en/latest/docs/hardware/getting-started/control-system-hardware.html#national-instruments-roborio), we use a compiler program called [Gradle](https://gradle.org/). The program is available using the `gradlew` or `gradlew.bat` scripts bundled with the code on Mac/Linux and Windows, respectively. Gradle is responsible for managing the plugins which compile the Java or Kotlin code into .jar and .class files, and the [GradleRIO plugin](https://github.com/wpilibsuite/GradleRIO), which deploys the code to the robot and handles things like remote debugging, running other WPI tools such as Shuffleboard from the command line and code simulation.
 
