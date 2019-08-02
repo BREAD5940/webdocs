@@ -14,7 +14,7 @@ Welcome to Team 5940's webdocs.
  - [The RoboRIO](docs/guides/generalRobot/roborio)
  - [Third party libraries](docs/guides/generalRobot/thirdParty)
 
-# [FalconLibrary](docs/guides/falconlib/)
+# FalconLibrary
 
 - [What is FalconLibrary?](docs/guides/falconlib/intro)
 - [Falcon Motors for open and closed loop](docs/guides/falconlib/falconmotor)
@@ -25,7 +25,7 @@ Welcome to Team 5940's webdocs.
 - [Falcon Command-based API](docs/guides/falconlib/commands)
 
 
-# [Info](docs/info)
+# Info
 
 - [Blogs of note](docs/info/blogs)
 - [Misc links and resources](docs/info/miscResources)

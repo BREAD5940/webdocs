@@ -12,4 +12,4 @@
 
 # [FalconLibrary](docs/guides/falconlib/)
 
-# [Info](docs/info)
+# [Info](docs/info/)

@@ -10,4 +10,4 @@
 
 # [General Robot](docs/guides/generalRobot)
 
-# [Info](docs/info)
+# [Info](docs/info/)

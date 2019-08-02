@@ -1,4 +1,4 @@
-# [Info](docs/info)
+# [Info](docs/info/)
 
 - [Blogs of note](docs/info/blogs)
 - [Misc links and resources](docs/info/miscResources)

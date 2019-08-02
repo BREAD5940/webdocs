@@ -42,10 +42,10 @@ A general article on debugging with IntelliJ is available from JetBrains [here](
 
 The first step to begin debugging is to attach IntelliJ's debugger to the robot's [JVM](https://en.wikipedia.org/wiki/Java_virtual_machine), which itself runs the robot code. The code will not run until the debugger is attached! The debugger setup and and attachment process is as follows:
 
-![](../../files/debugFlow.png)
+![](../../../files/debugFlow.png)
 
 Under the top bar, (1) click add configuration (if you already have a configuration, add the configuration from the dropdown menu using "edit configurations"). (2 & 3) Add a new "remote" configuration, and (4) configure it with the RoboRIO port (10.TE.AM.2 over WIFI, and we're team 5940 :| ) and our port. (5) Apply and exit with Ok. Now that you have your debug configuration setup, ensure that it is the active configuration -- if not, select it from the dropdown from step (1). 
 
 Next, let's attach out debugger to the RoboRIO. If you are not yet connected to a robot over Wifi that is awaiting a debug connection, go back to [Configuring the robot's JVM for debugging](#configuring-the-robots-jvm-for-debugging). Attach the debugger with the debug button, and start playing with some [breakpoints](https://en.wikipedia.org/wiki/Breakpoint)! Keep in mind that while the *robot* code will pause, controls running on Talons will *not*! Talons will continue to do what they were last asked to do, including yeeting forward into a wall.
 
-![](../../files/debugButtonScreen.png)
+![](../../../files/debugButtonScreen.png)

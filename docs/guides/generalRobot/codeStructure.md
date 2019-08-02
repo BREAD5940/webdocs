@@ -4,7 +4,7 @@ In a project, source code files are stored in [source sets](https://docs.gradle.
 
 This is the structure of the Kotlin example program. A ZIP file of it is available <a href="files/Kotlin-Example-Command-Based.zip" download="Kotlin-Example-Command-Based.zip">to download here</a>. 
 
-![](../../files/codeStructure.png)
+![](../../../files/codeStructure.png)
 
 Let's look at all the folders from the top down. The following folders and files do _not_ contain user code, but rather compiled files and configuration.
 
@@ -28,7 +28,7 @@ The `frc/robot` folder is where everything starts. It contains the main `Robot` 
 
 ## The Robot.kt/Robot.java file
 
-The main Robot file is run when the robot code first starts. For more information on `FalconTimedRobot`, [see here](docs/guides/falconlib/commandBased?id=falcontimedrobot). `FalconTimedRobot` is basically a wrapper around `TimedRobot`, and includes methods for resetting subsystems at key points and other cleanup methods. It's suggested to use it over using WPI's base class for robots, `TimedRobot`. Both the following methods, which are automatically called when the indicated event takes place:
+The main Robot file is run when the robot code first starts. For more information on `FalconTimedRobot`, [see this writeup](docs/guides/falconlib/commandBased?id=falcontimedrobot). `FalconTimedRobot` is basically a wrapper around `TimedRobot`, and includes methods for resetting subsystems at key points and other cleanup methods. It's suggested to use it over using WPI's base class for robots, `TimedRobot`. Both the following methods, which are automatically called when the indicated event takes place:
 
 ```java
 public void robotInit() {} // run when the robot first starts, useful for instantiating hardware 
