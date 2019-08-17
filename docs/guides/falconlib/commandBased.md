@@ -2,69 +2,75 @@
 
 ## FalconCommand and FalconSubsystems
 
-FalconLibrary command based is a loose wrapper around the upcoming [new command based for 2020](https://frc-docs.readthedocs.io/en/latest/docs/software/commandbased/index.html). FalconCommand no longer provides coroutine based timing, but rather only reserves subsystems for you with constructor arguments (more on that later). FalconSubsystem is simply `SendableSubsystemBase` with extra methods:
+FalconLibrary command based is a loose wrapper around the upcoming [new command based for 2020](https://frc-docs.readthedocs.io/en/latest/docs/software/commandbased/index.html). FalconCommand no longer provides coroutine based timing, but rather only reserves subsystems for you with constructor arguments (more on that later). An example of Falcon Command-based is avalible in the <a href="files/Kotlin-Example-Command-Based.zip" download="Kotlin-Example-Command-Based.zip">downlaodable example code</a> or in [Offseason-Croissant](https://github.com/bread5940/offseason-croissant) FalconSubsystem is simply `SendableSubsystemBase` with extra methods:
 
-```kotlin
+```Kotlin
 abstract class FalconSubsystem : SendableSubsystemBase() {
-    open fun lateInit() {}
-    open fun autoReset() {}
-    open fun teleopReset() {}
-    open fun setNeutral() {}
+    open fun lateInit() {} // run after robotInit
+    open fun autoReset() {} // run when auto starts
+    open fun teleopReset() {} // run when teleop starts
+    open fun setNeutral() {} // run on robot disable
 }
+```
+
+Similarly, `FalconCommand` is a light wrapper around WPI's `SendableCommandBase`. 
+
+```Kotlin
+package org.ghrobotics.lib.commands
+
+abstract class FalconCommand(vararg requirements: Subsystem) : SendableCommandBase() {
+    init {
+        addRequirements(*requirements)
+    }
+}
+
+class ExampleCommand : FaalconCommand(ExampleSubsystem) {}
 ```
 
 ## Building Command Groups in Kotlin with FalconLib
 
-blah blah. This example is from 5190's Cargo Ship routine:
+Command groups in FalconLibrary are simple to construct. Read more on Command groups in the [new command based for 2020 on frc-docs](https://frc-docs.readthedocs.io/en/latest/docs/software/commandbased/index.html). For example:
 
 ```Kotlin
-override val routine
-    get() = sequential {
-
-        +parallel {
-            +followVisionAssistedTrajectory(mode.path1, pathMirrored, 4.feet, true)
-            +sequential {
-                +WaitCommand(mode.path1.duration.second - 3.5.second.second)
-                +Superstructure.kHatchLow.withTimeout(2.0.second)
-            }
-        }
-
-        val path2 = followVisionAssistedTrajectory(mode.path2, pathMirrored, 4.feet)
-
-        +parallel {
-            +path2
-            +sequential {
-                +IntakeHatchCommand(true).withTimeout(0.5.second)
-                +IntakeCloseCommand()
-                +Superstructure.kBackHatchFromLoadingStation
-                +IntakeHatchCommand(false).withExit { path2.isFinished }
-            }
-        }
-
-        +relocalize(TrajectoryWaypoints.kLoadingStation, false, pathMirrored)
-
-        +parallel {
-            +IntakeHatchCommand(false).withTimeout(0.75.second)
-            +followVisionAssistedTrajectory(mode.path3, pathMirrored, 4.feet, true)
-            +sequential {
-                +WaitCommand(1.0)
-                +Superstructure.kHatchLow.withTimeout(4.second)
-            }
-        }
-
-        +parallel {
-            +IntakeHatchCommand(true).withTimeout(0.5.second)
-            +object : FalconCommand(DriveSubsystem) {
-                override fun execute() {
-                    DriveSubsystem.tankDrive(-0.3, -0.3)
-                }
-
-                override fun end(i: Boolean) {
-                    DriveSubsystem.zeroOutputs()
-                }
-            }.withTimeout(1.second)
-        }
++parallel {
+    +followVisionAssistedTrajectory(mode.path1, pathMirrored, 4.feet, true)
+    +sequential {
+        +WaitCommand(mode.path1.duration.second - 3.5.second.second)
+        +Superstructure.kHatchLow.withTimeout(2.0.second)
     }
+}
+```
+
+In order to cleanly construct, new command groups, FalconLibrary offers four different builders -- one for each different kind of command group.
+
+```Kotlin
+package org.ghrobotics.lib.commands
+
+fun sequential(block: BasicCommandGroupBuilder.() -> Unit) 
+fun parallel(block: BasicCommandGroupBuilder.() -> Unit)
+fun parallelRace(block: BasicCommandGroupBuilder.() -> Unit)
+fun parallelDeadline(deadline: Command, block: ParallelDeadlineGroupBuilder.() -> Unit)
+```
+
+The `BasicCommandGroupBuilder` class contains an overridden unary plus (the + operator), which it uses to add the command to the current group. To add a command to a group being built within one of the builders listed above, simply call the `+` operator on the command and it will be added.
+
+```Kotlin
+operator fun Command.unaryPlus() = commands.add(this@unaryPlus)
+```
+
+Nore information on the qualified `this` keyword is available [here](https://kotlinlang.org/docs/reference/this-expressions.html).
+
+In Kotlin lambda arguments should be outside of parenthesis. For this reason, while the first is _technically_ correct, it should never be used. Both end up building the same command group though.
+
+```Kotlin
+val group = sequential({
+    +Foo()
+    +Bar()
+})
+
+val anotherGroup = sequential {
+    +Foo()
+    +Bar()
 }
 ```
 
