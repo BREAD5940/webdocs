@@ -14,6 +14,10 @@ Welcome to Team 5940's webdocs.
  - [The RoboRIO](docs/guides/generalRobot/roborio)
  - [Third party libraries](docs/guides/generalRobot/thirdParty)
 
+## Code a robot!
+ - [Readme](docs/guides/generalRobot/codeARobot/README)
+ - [Driving Around](docs/guides/generalRobot/codeARobot/driving)
+
 # FalconLibrary
 
 - [What is FalconLibrary?](docs/guides/falconlib/intro)

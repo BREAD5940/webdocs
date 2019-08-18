@@ -10,6 +10,10 @@
  - [The RoboRIO](docs/guides/generalRobot/roborio)
  - [Third party libraries](docs/guides/generalRobot/thirdParty)
 
+## Code a robot!
+ - [Readme](docs/guides/generalRobot/codeARobot/README)
+ - [Driving Around](docs/guides/generalRobot/codeARobot/driving)
+
 # [FalconLibrary](docs/guides/falconlib/)
 
 # [Info](docs/info/)
