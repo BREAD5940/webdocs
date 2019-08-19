@@ -1,6 +1,6 @@
 # Getting driving -- yeeting around like you stole it
 
-Here we'll start writing code to start driving Croissant around. We'll start with the <a href="files/Kotlin-Example-Command-Based.zip" download="Kotlin-Example-Command-Based.zip">Kotlin example codebase</a>. By the end of this you should be familiar with making CAN motor controllers tell motors to spin, interfacing with xbox controllers and creating a basic Command for driving. 
+Here we'll start writing code to start driving Croissant around. We'll start with the [Kotlin example codebase](https://github.com/BREAD5940/Kotlin-Example). By the end of this you should be familiar with making CAN motor controllers tell motors to spin, interfacing with xbox controllers and creating a basic Command for driving. 
 
 However, this example code comes with an `ExampleSubsystem` and `ExampleCommand`. The subsytem as a FalconSRX on an arbitrary port which may or may not exist on the robot you're using it on, and may in fact cause undesired behavior. For this reason, before starting on making a Drivetrain subsystem, remove references to either from Controls and Robot, and delete both the `ExampleSubsystem` and `ExampleCommand`. 
 
