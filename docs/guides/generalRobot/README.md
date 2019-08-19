@@ -14,6 +14,7 @@
 ## Code a robot!
  - [Readme](docs/guides/generalRobot/codeARobot/README)
  - [Driving Around](docs/guides/generalRobot/codeARobot/driving)
+ - [Driving at a velocity with PID+F on Talons](docs/guides/generalRobot/codeARobot/driveVeloPid)
 
 # [FalconLibrary](docs/guides/falconlib/)
 
