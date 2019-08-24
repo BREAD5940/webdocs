@@ -1,7 +1,7 @@
 # General Robotics
 
  - [Learn to code a robot](docs/guides/generalRobot/learnToRobot)
- - [How to write code a robot to drive](docs/guides/generalRobot/codeARobot/driving)
+ - [How to program a robot to drive](docs/guides/generalRobot/codeARobot/driving)
  - [Driving at a velocity with PID+F on Talons](docs/guides/generalRobot/codeARobot/driveVeloPid)
  - [Characterization](docs/guides/generalRobot/characterization)
  - [Code Structure](docs/guides/generalRobot/codeStructure)
