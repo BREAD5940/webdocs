@@ -1,4 +1,4 @@
-# Getting driving -- yeeting around like you stole it
+# Writing Code to Control a Drivetrain
 
 Here we'll start writing code to start driving Croissant around. We'll start with the [Kotlin example codebase](https://github.com/BREAD5940/Kotlin-Example). By the end of this you should be familiar with making CAN motor controllers tell motors to spin, interfacing with xbox controllers and creating a basic Command for driving. 
 
