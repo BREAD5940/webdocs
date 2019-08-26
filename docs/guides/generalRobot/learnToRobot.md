@@ -26,8 +26,9 @@ The following articles hosted here should help get your development environment 
 
 - [Download and Install WPILib](https://github.com/wpilibsuite/allwpilib/releases)
 - [Install IntelliJ](https://www.jetbrains.com/idea/download)
-- [How to use Git](http://imgs.xkcd.com/comics/git.png)
+- [How to use Git](docs/guides/generalRobot/git)
 - [Importing a building projects with Gradle](docs/guides/generalRobot/introToGradle)
+- [Vision Processing](docs/guides/generalRobot/vision)
 
 ## Beginning Stuff
 - [What is this WPILib library anyways?](https://frc-docs.readthedocs.io/en/latest/docs/software/wpilib-overview/what-is-wpilib.html)
