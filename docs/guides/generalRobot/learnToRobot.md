@@ -20,11 +20,25 @@ Code is structured in subfolders within the `src` folder in the root of the proj
 
 In general, working on robot code is 10% coding and 90% debugging and tuning. Through resources such as WPILib and FalconLibrary, very little real and difficult code remains by the time you actually sit down to write a program. You'll spend most of your time getting familiar with the features offered by both libraries and how they integrate to create a moving and functioning robot. For example, we don't have to write code to interface directly with the [Pneumatics Control Module](https://frc-docs.readthedocs.io/en/latest/docs/software/actuators/pneumatics.html) to control solenoids, but instead use WPILib's `DoubleSolenoid` or FalconLibrary's `FalconDoubleSolenoid` classes. The code has already been written and includes features to make using them as simple as possible -- all that you have to do is give it the right settings, and the rest is handled for you, behind the scenes.
 
-## Further Reading
+## Very Very Intro Stuff
 
 The following articles hosted here should help get your development environment set up as well as get started writing robot code.
 
 - [Download and Install WPILib](https://github.com/wpilibsuite/allwpilib/releases)
 - [Install IntelliJ](https://www.jetbrains.com/idea/download)
+- [How to use Git](http://imgs.xkcd.com/comics/git.png)
 - [Importing a building projects with Gradle](docs/guides/generalRobot/introToGradle)
-- [Follow the robot code tutorials](docs/guides/generalRobot/codeARobot/README)
+
+## Beginning Stuff
+- [What is this WPILib library anyways?](https://frc-docs.readthedocs.io/en/latest/docs/software/wpilib-overview/what-is-wpilib.html)
+- [What's "command-based programming" in WPILib?](https://frc-docs.readthedocs.io/en/latest/docs/software/commandbased/what-is-command-based.html)
+- [What actuators can I use to make stuff move?](https://frc-docs.readthedocs.io/en/latest/docs/software/actuators/overview.html)
+- [Robot Electronic Components](https://frc-docs.readthedocs.io/en/latest/docs/hardware/getting-started/control-system-hardware.html)
+- [Making a motor spin](https://frc-docs.readthedocs.io/en/latest/docs/software/actuators/using-speed-controllers.html)
+- [Making a piston fwoosh](https://frc-docs.readthedocs.io/en/latest/docs/software/actuators/pneumatics.html)
+- [Driving around](docs/guides/generalRobot/codeARobot/driving)
+
+## Stuff you Should do Second (Advanced Stuff)
+- [What is Vision?](docs/guides/generalRobot/vision)
+- [Arm PID -- a showcase of the different Talon modes](docs/guides/generalRobot/codeARobot/basicArm)
+- [Driving at a velocity with PID+F on Talons](docs/guides/generalRobot/codeARobot/driveVeloPid)
