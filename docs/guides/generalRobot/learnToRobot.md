@@ -33,11 +33,16 @@ The following articles hosted here should help get your development environment 
 ## Beginning Stuff
 - [What is this WPILib library anyways?](https://frc-docs.readthedocs.io/en/latest/docs/software/wpilib-overview/what-is-wpilib.html)
 - [What's "command-based programming" in WPILib?](https://frc-docs.readthedocs.io/en/latest/docs/software/commandbased/what-is-command-based.html)
-- [What actuators can I use to make stuff move?](https://frc-docs.readthedocs.io/en/latest/docs/software/actuators/overview.html)
+- [What actuators can I use to make stuff move in code?](https://frc-docs.readthedocs.io/en/latest/docs/software/actuators/overview.html)
+- [How does one drive a robot around? With the FRC DriverStation, of course.](https://frc-docs.readthedocs.io/en/latest/docs/software/driverstation/index.html)
 - [Robot Electronic Components](https://frc-docs.readthedocs.io/en/latest/docs/hardware/getting-started/control-system-hardware.html)
 - [Making a motor spin](https://frc-docs.readthedocs.io/en/latest/docs/software/actuators/using-speed-controllers.html)
 - [Making a piston fwoosh](https://frc-docs.readthedocs.io/en/latest/docs/software/actuators/pneumatics.html)
-- [Driving around](docs/guides/generalRobot/codeARobot/driving)
+- [Learn to code a drivetrain](docs/guides/generalRobot/codeARobot/driving)
+
+## IDK where this goes yet but it's important Systems stuff
+- [What are some sensors you can put on your robot that are supported by WPILib? (Hardware)](https://frc-docs.readthedocs.io/en/latest/docs/hardware/sensors/index.html)
+- [What are some sensors you can put on your robot that are supported by WPILib? (Software)](https://frc-docs.readthedocs.io/en/latest/docs/software/sensors/index.html)
 
 ## Stuff you Should do Second (Advanced Stuff)
 - [What is Vision?](docs/guides/generalRobot/vision)
