@@ -17,11 +17,27 @@ On Windows the command to install pynetworktables, matplotlib, scipy, and statsm
 On Mac with Python 3.7 installed, run 
 ```python3.7 -m pip install pynetworktables matplotlib scipy statsmodels```
 
-## Running the characterization
+To run any of the scripts, clone the repository(`git clone https://github.com/robotpy/robot-characterization.git` or clone `https://github.com/robotpy/robot-characterization/` from the Github Desktop app)
+
+## Collecting Drive Data
+
+To collect data, we must provide information from our robot program on drive position and velocity as well as voltage and timestamp. An example drive characterization program is [bundled with the tool](https://github.com/robotpy/robot-characterization/blob/master/drive-characterization/robot-java-talonsrx/src/main/java/dc/Robot.java). If you wish to implement your own logging logic into an existing robot project, read the notes and comments on the linked program. Just remember to note what units you used for later, and change the constants in the linked file to fit the robot you are characterizing as well as your selected units.
 
 To log data, call the corresponding data logger. For example, to characterize a drivetrain, use the command `python3.7 drive-characterization/data_logger.py`. Next, enter the team number (5940) to connect to the robot. Next, enable the robot in autonomous, being careful of obstacles or humans in the way. The robot will drive forward and backward twice, collecting data. The data analyzer will automatically be run and constants calculated. If you wish to analyze a previous run, call `python3.7 data_analyzer.py PATH_TO_LOG.json`. 
 
-## Using with 254 drive models
+## Analyzing Drive Data
+
+TODO
+
+## Collecting Arm Data
+
+To run the arm characterization tool, follow the same process as drive characterization but run the arm script instead of the drive script. Run `python3.7 arm-characterization/data_logger.py` with our team number. Add the necessary reporting to your robot's autonomous logic [as described here](https://github.com/robotpy/robot-characterization/blob/master/arm-characterization/robot-java-talonsrx/src/main/java/dc/Robot.java). As with the drive, you may implement the logic from that program into your own robot code by following the comments. Also make sure to keep track of your units, and change the constants to fit the robot you are characterizing as well as your selected units.
+
+## Analyzing Drive Data
+
+TODO
+
+## Using drive data with 254 drive models
 
 Once the left and right kV, kA and vStatic have been calculated, they can be used to create a model of the drivetrain using the `DifferentialDrive` class. The following example is from our 2019 code for Croissant:
 
