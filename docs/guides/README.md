@@ -1,4 +1,4 @@
 # Guides
 
-## [General Robotics](docs/guides/generalRobot/)
-## [FalconLibrary](docs/guides/falconlib/)
+## [General Robotics](generalRobot/)
+## [FalconLibrary](falconlib/)
