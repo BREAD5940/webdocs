@@ -1,21 +1,21 @@
 # General Robotics
 
- - [Learn to code a robot](docs/guides/generalRobot/learnToRobot)   
+ - [Learn to code a robot](learnToRobot.md)
    - Look at me first!  
- - [Characterization](docs/guides/generalRobot/characterization)
- - [Code Structure](docs/guides/generalRobot/codeStructure)
- - [Cubic Deadband](docs/guides/generalRobot/cubicDeadband)
- - [Debugging with IntelliJ](docs/guides/generalRobot/debug)
- - [Git intro](docs/guides/generalRobot/git)
- - [Getting started with Gradle](docs/guides/generalRobot/introToGradle)
- - [The RoboRIO](docs/guides/generalRobot/roborio)
- - [Third party libraries](docs/guides/generalRobot/thirdParty)
+ - [Characterization](characterization.md)
+ - [Code Structure](codeStructure.md)
+ - [Cubic Deadband](cubicdeadband.md)
+ - [Debugging with IntelliJ](debug.md)
+ - [Git intro](git.md)
+ - [Getting started with Gradle](introToGradle.md)
+ - [The RoboRIO](roborio.md)
+ - [Third party libraries](thirdParty.md)
 
 ## Code a robot!
- - [Readme](docs/guides/generalRobot/codeARobot/README)
- - [Driving Around](docs/guides/generalRobot/codeARobot/driving)
- - [Driving at a velocity with PID+F on Talons](docs/guides/generalRobot/codeARobot/driveVeloPid)
+ - [Readme](codeARobot/README.md)
+ - [Driving Around](codeARobot/driving.md)
+ - [Driving at a velocity with PID+F on Talons](codeARobot/driveVeloPid.md)
 
-# [FalconLibrary](docs/guides/falconlib/)
+# [FalconLibrary](../falconlib/)
 
-# [Info](docs/info/)
+# [Info](../../info/)
